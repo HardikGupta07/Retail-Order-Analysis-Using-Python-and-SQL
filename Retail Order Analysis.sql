@@ -100,13 +100,6 @@ FROM df_orders
 GROUP BY region
 ORDER BY total_profit DESC;
 
---Top Cities by Sales:
-SELECT city, SUM(sale_price) AS total_sales
-FROM df_orders
-GROUP BY city
-ORDER BY total_sales DESC
-LIMIT 10;
-
 -- Find top 5 highest selling products in each region:
 WITH cte AS (
     SELECT region, product_id, SUM(sale_price) AS sales
@@ -132,17 +125,6 @@ SELECT EXTRACT(YEAR FROM order_date) AS year, EXTRACT(QUARTER FROM order_date) A
 FROM df_orders
 GROUP BY year, quarter
 ORDER BY year, quarter;
-
---Sales Growth Rate by Month:
-WITH monthly_sales AS (
-    SELECT DATE_TRUNC('month', order_date) AS month, SUM(sale_price) AS total_sales
-    FROM df_orders
-    GROUP BY month
-)
-SELECT month, total_sales, 
-       LAG(total_sales) OVER (ORDER BY month) AS previous_month_sales,
-       (total_sales - LAG(total_sales) OVER (ORDER BY month)) / LAG(total_sales) OVER (ORDER BY month) * 100 AS growth_rate
-FROM monthly_sales;
 
 -- Find month-over-month growth comparison for 2022 and 2023 sales:
 WITH cte AS (
@@ -191,20 +173,6 @@ FROM df_orders
 GROUP BY category
 ORDER BY total_profit DESC;
 
---Top Sub-Categories by Sales:
-SELECT sub_category, SUM(sale_price) AS total_sales
-FROM df_orders
-GROUP BY sub_category
-ORDER BY total_sales DESC
-LIMIT 10;
-
---Sub-Categories with Highest Profit:
-SELECT sub_category, SUM(profit) AS total_profit
-FROM df_orders
-GROUP BY sub_category
-ORDER BY total_profit DESC
-LIMIT 10;
-
 -- Identify the sub-category with the highest growth in profit from 2022 to 2023:
 WITH cte AS (
     SELECT sub_category,
@@ -223,21 +191,6 @@ FROM cte2
 ORDER BY (sales_2023 - sales_2022) DESC
 LIMIT 1;
 
--- For each category, find the month with the highest sales:
-WITH cte AS (
-    SELECT category,
-           TO_CHAR(order_date, 'YYYYMM') AS order_year_month,
-           SUM(sale_price) AS sales 
-    FROM df_orders
-    GROUP BY category, TO_CHAR(order_date, 'YYYYMM')
-)
-SELECT *
-FROM (
-    SELECT *,
-           ROW_NUMBER() OVER(PARTITION BY category ORDER BY sales DESC) AS rn
-    FROM cte
-) AS a
-WHERE rn = 1;
 
 
 
