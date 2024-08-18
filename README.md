@@ -4,10 +4,10 @@ This project focuses on extracting retail orders data from Kaggle using the Kagg
 ## Project Overview
 The project performs the following steps:
 
-- Data Extraction: Extracts data from Kaggle using the Kaggle API (Python).
-- Data Transformation: Cleans and transforms the data for analysis using pandas (Python).
-- Data Loading: Loads the transformed data into a PostgreSQL database.
-- Data Insights: Performs analysis using PostgreSQL to uncover trends within the retail order data.
+- Data Extraction: Extracted data from Kaggle using the Kaggle API (Python).
+- Data Transformation: Cleaned and transformed the data for analysis using pandas (Python).
+- Data Loading: Loaded the transformed data into a PostgreSQL database.
+- Data Insights: Performed analysis using PostgreSQL to uncover trends within the retail order data.
 ## Technologies Used
 - Python
 - pandas
