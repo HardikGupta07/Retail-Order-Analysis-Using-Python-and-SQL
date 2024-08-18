@@ -1,4 +1,4 @@
-# RETAIL-ORDER-ANALYSIS
+# ![image](https://github.com/user-attachments/assets/7572374e-1143-4771-8279-576f6f4d0236) RETAIL-ORDER-ANALYSIS
 This project focuses on extracting retail orders data from Kaggle using the Kaggle API, performing data transformation with pandas in Python, and analyzing the data using PostgreSQL.
 
 ## Project Overview
@@ -32,6 +32,16 @@ The project performs the following steps:
 ![image](https://github.com/user-attachments/assets/6623ec47-ca7c-4dc8-aaae-313a3cf437d4)
 ![image](https://github.com/user-attachments/assets/b4f222e9-80ca-4c09-b729-c30138c39cb3)
 ![image](https://github.com/user-attachments/assets/2c292f39-3d4f-4001-9722-3836852e1ab9)
+![image](https://github.com/user-attachments/assets/4a026364-1f92-43bf-8110-bfd6e3e79ef8)
+![image](https://github.com/user-attachments/assets/6a1b9573-ac7f-4eac-963d-f7ab69452b49)
+![image](https://github.com/user-attachments/assets/b6a4a0de-19c8-41a0-bae1-f0687fe0c7f4)
+![image](https://github.com/user-attachments/assets/4d30af83-1028-4f9b-9c01-3b2289255b86)
+![image](https://github.com/user-attachments/assets/244ce0b8-90da-4294-b10e-2f32cf12572f)
+
+
+
+
+
 
 
 
