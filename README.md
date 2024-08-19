@@ -14,6 +14,8 @@ The project performs the following steps:
 - Kaggle API
 - PostgreSQL
 ![image](https://github.com/user-attachments/assets/98d40e55-c8e2-450d-aa07-39f3ab73a88d)
+![image](https://github.com/user-attachments/assets/bfc0f40a-95a2-4f1f-9e58-039c48a859c3)
+![image](https://github.com/user-attachments/assets/f9eda099-aa87-422c-96ae-696e18cd0754)
 ![image](https://github.com/user-attachments/assets/c7e74e90-8bea-4757-bcdf-17c4bfe60560)
 ## PostgreSQL and Insights
 ![image](https://github.com/user-attachments/assets/8f8c99f3-bfaa-4bac-bc8f-42e757659cc3)
